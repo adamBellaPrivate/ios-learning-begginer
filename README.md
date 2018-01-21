@@ -3,10 +3,17 @@ ios application development examples:
 
 1. Swift for beginngers
     description: TBD
-2. Hello World iOS application
+2. SwiftLoops
     description: TBD
-3. Flash application
+3. Dispatch Group
     description: TBD
-4. Move gesture
-5. QR Code reading
-6. Dispatch Group
+4. Hello World iOS application
+    description: TBD
+5. Flash application
+    description: TBD
+6. Move gesture
+    description: TBD
+7. QR Code reading
+    description: TBD
+8. GridTestProject
+    description: TBD
