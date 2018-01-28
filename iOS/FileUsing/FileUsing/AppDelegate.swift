@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  GridTestProject
+//  FileUsing
 //
-//  Created by Ádám Bella on 9/18/17.
-//  Copyright © 2017 Ádám Bella. All rights reserved.
+//  Created by Ádám Bella on 1/21/18.
+//  Copyright © 2018 Ádám Bella. All rights reserved.
 //
 
 import UIKit
@@ -14,9 +14,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
 
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+        NSSetUncaughtExceptionHandler { exception in
+            NSLog("sajt")
+            NSLog("\(exception.callStackReturnAddresses)")
+            NSLog("\(exception.callStackSymbols)")
+        }
+        
+        signal(SIGABRT) { (ajto) in
+            NSLog("1")
+            NSLog("\(ajto)")
+            NSLog("\(Thread.callStackSymbols)")
+        }
+        
+        signal(SIGILL) { (_) in
+           NSLog("2")
+           NSLog("\(Thread.callStackSymbols)")
+        }
+        
+        signal(SIGSEGV) { (_) in
+           NSLog("3")
+           NSLog("\(Thread.callStackSymbols)")
+        }
+        signal(SIGFPE) { (_) in
+            NSLog("4")
+            NSLog("\(Thread.callStackSymbols)")
+        }
+        signal(SIGBUS) { (_) in
+            NSLog("5")
+            NSLog("\(Thread.callStackSymbols)")
+        }
+        
+        signal(SIGPIPE) { (_) in
+           NSLog("6")
+           NSLog("\(Thread.callStackSymbols)")
+        }
+        
+        
         return true
     }
 
@@ -41,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
+
+
 }
 

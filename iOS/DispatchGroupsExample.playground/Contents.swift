@@ -35,13 +35,16 @@ for url in urls {
 
 //You can wait for the all answer with this solution:
 //urlGroup.wait()
+//PlaygroundPage.current.finishExecution()
 
 //You can use timeout.
 //guard urlGroup.wait(timeout: .now() + 3) == .success else { fatalError()}
 //print("All done")
+//PlaygroundPage.current.finishExecution()
 
 //Callback answer
 urlGroup.notify(queue: .main){
+    PlaygroundPage.current.finishExecution()
     print("All done")
 }
 

@@ -90,6 +90,7 @@ class BAGridView: UIView {
     
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else {return}
+        
         context.setLineWidth(0.5)
         context.setStrokeColor(UIColor.red.cgColor);
         
@@ -283,4 +284,6 @@ class BAGridView: UIView {
         }
         
     }
+    
+    
 }

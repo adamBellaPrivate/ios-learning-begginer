@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppleMapExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vjg-Cd-GRU">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaH-Pp-hCB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="slI-EH-4br"/>
+                                </constraints>
+                                <state key="normal" title="Go To Csapod"/>
+                                <connections>
+                                    <action selector="actionToGoCity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="knI-lI-PiQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4R0-bh-xQr">
+                                <rect key="frame" x="0.0" y="60" width="375" height="40"/>
+                                <state key="normal" title="Open Csapon on the map"/>
+                                <connections>
+                                    <action selector="actionVisitCity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HSo-nE-wVW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWc-IT-PPa">
+                                <rect key="frame" x="269" y="622" width="91" height="30"/>
+                                <state key="normal" title="User location"/>
+                                <connections>
+                                    <action selector="actionNavigateToUserLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8r4-Ev-TKV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vjg-Cd-GRU" secondAttribute="bottom" id="5db-bm-uU0"/>
+                            <constraint firstItem="4R0-bh-xQr" firstAttribute="height" secondItem="jaH-Pp-hCB" secondAttribute="height" id="76s-Yn-95M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jaH-Pp-hCB" secondAttribute="trailing" id="Als-Uk-Zsp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IWc-IT-PPa" secondAttribute="bottom" constant="15" id="K9b-WL-aC0"/>
+                            <constraint firstItem="4R0-bh-xQr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PGT-eE-69M"/>
+                            <constraint firstItem="jaH-Pp-hCB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S79-rO-rDY"/>
+                            <constraint firstItem="jaH-Pp-hCB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VEs-WZ-wYF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vjg-Cd-GRU" secondAttribute="trailing" id="WDe-nf-TEY"/>
+                            <constraint firstItem="vjg-Cd-GRU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hx2-Np-JnI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4R0-bh-xQr" secondAttribute="trailing" id="i3l-Ef-kgq"/>
+                            <constraint firstItem="4R0-bh-xQr" firstAttribute="top" secondItem="jaH-Pp-hCB" secondAttribute="bottom" id="kPq-F4-vsU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IWc-IT-PPa" secondAttribute="trailing" constant="15" id="oX6-wX-M1p"/>
+                            <constraint firstItem="vjg-Cd-GRU" firstAttribute="top" secondItem="4R0-bh-xQr" secondAttribute="bottom" id="sV2-sY-8GI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="vjg-Cd-GRU" id="DdZ-WY-lJs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="52.623688155922046"/>
+        </scene>
+    </scenes>
+</document>
