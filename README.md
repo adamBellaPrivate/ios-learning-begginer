@@ -18,3 +18,4 @@ ios application development examples:
 8. GridTestProject
     description: TBD
 9. AppleMapExample
+10. GoogleMapsExample
