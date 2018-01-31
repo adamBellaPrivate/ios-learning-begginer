@@ -20,3 +20,4 @@ ios application development examples:
 9. AppleMapExample
 10. GoogleMapsExample
 11. Temperature unit converter
+12. SpeechRecognitionExample

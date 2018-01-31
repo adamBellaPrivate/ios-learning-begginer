@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeechRecognitionExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RB7-3b-kHQ">
+                                <rect key="frame" x="0.0" y="50" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yL2-bh-OEm"/>
+                                </constraints>
+                                <state key="normal" title="Start/Stop"/>
+                                <connections>
+                                    <action selector="actionWithRecognition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JSe-ML-q9z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1q-oj-zHx">
+                                <rect key="frame" x="0.0" y="90" width="375" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stopped" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61D-fL-Aij">
+                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HPz-IY-xpB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="61D-fL-Aij" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4gh-WW-X1w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a1q-oj-zHx" secondAttribute="trailing" id="60C-ss-lGl"/>
+                            <constraint firstItem="RB7-3b-kHQ" firstAttribute="top" secondItem="61D-fL-Aij" secondAttribute="bottom" id="6Q6-uV-Q35"/>
+                            <constraint firstItem="a1q-oj-zHx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C6u-UG-Imf"/>
+                            <constraint firstItem="61D-fL-Aij" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cbi-av-OHd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RB7-3b-kHQ" secondAttribute="trailing" id="Ehf-tG-3sC"/>
+                            <constraint firstItem="RB7-3b-kHQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XVs-06-ffB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="a1q-oj-zHx" secondAttribute="bottom" id="aUT-44-9jU"/>
+                            <constraint firstItem="a1q-oj-zHx" firstAttribute="top" secondItem="RB7-3b-kHQ" secondAttribute="bottom" id="oaO-5p-JZe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="61D-fL-Aij" secondAttribute="trailing" id="xmN-xF-GGj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="detectedTexts" destination="a1q-oj-zHx" id="P8h-ki-6LK"/>
+                        <outlet property="recordingStateLabel" destination="61D-fL-Aij" id="Gwj-LW-jaS"/>
+                        <outlet property="startStopButton" destination="RB7-3b-kHQ" id="vst-Wr-FiB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

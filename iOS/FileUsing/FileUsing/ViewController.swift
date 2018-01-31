@@ -13,20 +13,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //BALog.init("Teszt log")
-        BALog("teszt 2 log")
+        BALog("I want to present my log solution")
         
-        let result = Valami.Success("dadsa")
+        let result = Result.Success("It was success")
         
         print(result)
         
         switch result {
-        case .Success(let value): print("Yes, \(value) is in the lower half!")
-        case .Fail(let value): print("\(value) Not in the lower half.")
+            case .Success(let value): print("\(value)")
+            case .Fail(let value): print("\(value)")
         }
         
         if case let .Success(value) = result {
-            print("\(value) Not in the lower half.")
+            print("False value: \(value)")
         }
         
         if let path = Bundle.main.path(forResource: "TextFile", ofType: "txt") {
@@ -39,21 +38,5 @@ class ViewController: UIViewController {
             }
         }
         
-      
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    
-
 }
-
-public enum Valami<T> {
-    case Success(T)
-    case Fail(T)
-}
-
