@@ -21,3 +21,6 @@ ios application development examples:
 10. GoogleMapsExample
 11. Temperature unit converter
 12. SpeechRecognitionExample
+13. FileUsing:
+      Custom log
+14. SwiftLoops
